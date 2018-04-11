@@ -964,10 +964,6 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "Telescience Lab"
 	icon_state = "toxmisc"
 
-/area/rnd/telesci
-	name = "Telescience Lab"
-	icon_state = "toxmisc"
-
 /area/rnd/scibreak
 	name = "Science Break Room"
 	icon_state = "toxlab"
