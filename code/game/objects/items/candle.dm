@@ -4,7 +4,7 @@
 	icon = 'icons/obj/candle.dmi'
 	icon_state = "candle1"
 	item_state = "candle1"
-	w_class = 1
+	w_class = ITEM_SIZE_TINY
 
 	var/wax = 200
 	var/lit = 0

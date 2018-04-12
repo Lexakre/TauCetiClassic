@@ -24,7 +24,7 @@
 	var/l_hacking = 0
 	var/emagged = 0
 	var/open = 0
-	w_class = 3.0
+	w_class = ITEM_SIZE_NORMAL
 	max_w_class = 2
 	max_combined_w_class = 14
 
@@ -157,7 +157,7 @@
 	force = 8.0
 	throw_speed = 1
 	throw_range = 4
-	w_class = 4.0
+	w_class = ITEM_SIZE_LARGE
 
 /obj/item/weapon/storage/secure/briefcase/atom_init()
 	. = ..()

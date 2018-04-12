@@ -6,7 +6,7 @@
 	item_state = "trashbag"
 	color = "red"
 
-	w_class = 4
+	w_class = ITEM_SIZE_LARGE
 	max_w_class = 4
 	storage_slots = 15
 	max_combined_w_class = 60

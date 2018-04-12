@@ -102,7 +102,7 @@
 	desc = "A box of crayons for all your rune drawing needs."
 	icon = 'icons/obj/crayons.dmi'
 	icon_state = "crayonbox"
-	w_class = 2.0
+	w_class = ITEM_SIZE_SMALL
 	storage_slots = 6
 	icon_type = "crayon"
 	can_hold = list(
@@ -145,7 +145,7 @@
 	desc = "A box of glowsticks (Do not eat)."
 	icon = 'icons/obj/glowsticks.dmi'
 	icon_state = "sticksbox"
-	w_class = 2.0
+	w_class = ITEM_SIZE_SMALL
 	storage_slots = 5
 	icon_type = "glowstick"
 	can_hold = list(
@@ -189,7 +189,7 @@
 	icon = 'icons/obj/cigarettes.dmi'
 	icon_state = "cigpacket"
 	item_state = "cigpacket"
-	w_class = 1
+	w_class = ITEM_SIZE_TINY
 	throwforce = 2
 	slot_flags = SLOT_BELT
 	storage_slots = 6

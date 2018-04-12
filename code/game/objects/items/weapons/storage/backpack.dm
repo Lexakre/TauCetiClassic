@@ -8,7 +8,7 @@
 	desc = "You wear this on your back and put items into it."
 	icon_state = "backpack"
 	item_state = "backpack"
-	w_class = 4.0
+	w_class = ITEM_SIZE_LARGE
 	slot_flags = SLOT_BACK	//ERROOOOO
 	action_button_name = "Storage"
 	max_w_class = 3
@@ -84,7 +84,7 @@
 	desc = "Space Santa uses this to deliver toys to all the nice children in space in Christmas! Wow, it's pretty big!"
 	icon_state = "giftbag0"
 	item_state = "giftbag"
-	w_class = 4.0
+	w_class = ITEM_SIZE_LARGE
 	storage_slots = 20
 	max_w_class = 3
 	max_combined_w_class = 400 // can store a ton of shit!
@@ -278,7 +278,7 @@
 	desc = "A very slim satchel that can easily fit into tight spaces."
 	icon_state = "satchel-flat"
 	item_state = "satchel-flat"
-	w_class = 3 //Can fit in backpacks itself.
+	w_class = ITEM_SIZE_NORMAL //Can fit in backpacks itself.
 	max_combined_w_class = 15
 	level = 1
 	cant_hold = list(/obj/item/weapon/storage/backpack/satchel/flat) //muh recursive backpacks

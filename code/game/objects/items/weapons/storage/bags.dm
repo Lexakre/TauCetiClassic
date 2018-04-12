@@ -33,7 +33,7 @@
 	icon_state = "trashbag"
 	item_state = "trashbag"
 
-	w_class = 4
+	w_class = ITEM_SIZE_LARGE
 	max_w_class = 2
 	storage_slots = 21
 	can_hold = list() // any
@@ -69,7 +69,7 @@
 	icon_state = "plasticbag"
 	item_state = "plasticbag"
 
-	w_class = 4
+	w_class = ITEM_SIZE_LARGE
 	max_w_class = 2
 	storage_slots = 21
 	can_hold = list() // any
@@ -85,7 +85,7 @@
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "satchel"
 	slot_flags = SLOT_BELT | SLOT_POCKET
-	w_class = 3
+	w_class = ITEM_SIZE_NORMAL
 	storage_slots = 50
 	max_combined_w_class = 100
 	can_hold = list("/obj/item/weapon/ore", "/obj/item/bluespace_crystal")
@@ -109,7 +109,7 @@
 	storage_slots = 50; //the number of plant pieces it can carry.
 	max_combined_w_class = 200 //Doesn't matter what this is, so long as it's more or equal to storage_slots * plants.w_class
 	max_w_class = 3
-	w_class = 2
+	w_class = ITEM_SIZE_SMALL
 	can_hold = list("/obj/item/weapon/reagent_containers/food/snacks/grown","/obj/item/seeds","/obj/item/weapon/grown")
 
 
@@ -126,7 +126,7 @@
 	desc = "A patented Nanotrasen storage system designed for any kind of mineral sheet."
 
 	var/capacity = 300; //the number of sheets it can carry.
-	w_class = 3
+	w_class = ITEM_SIZE_NORMAL
 
 	allow_quick_empty = 1 // this function is superceded
 
@@ -260,5 +260,5 @@
 	desc = "A bag for carrying lots of cash. It's got a big dollar sign printed on the front."
 	storage_slots = 50; //the number of cash pieces it can carry.
 	max_combined_w_class = 100
-	w_class = 2
+	w_class = ITEM_SIZE_SMALL
 	can_hold = list("/obj/item/weapon/coin","/obj/item/weapon/spacecash")

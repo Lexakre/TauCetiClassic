@@ -12,7 +12,7 @@
 	var/burning = null
 	var/hitsound = null
 	var/wet = 0
-	var/w_class = 3.0
+	var/w_class = ITEM_SIZE_NORMAL
 	var/can_embed = 1
 	var/slot_flags = 0		//This is used to determine on which slots an item can fit.
 	pass_flags = PASSTABLE

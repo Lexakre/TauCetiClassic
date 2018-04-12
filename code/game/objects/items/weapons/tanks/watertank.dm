@@ -6,7 +6,7 @@
 	icon = 'icons/obj/hydroponics/equipment.dmi'
 	icon_state = "waterbackpack"
 	item_state = "waterbackpack"
-	w_class = 4.0
+	w_class = ITEM_SIZE_LARGE
 	action_button_name = "Toggle Mister"
 
 	var/obj/item/weapon/noz
@@ -112,7 +112,7 @@
 	icon = 'icons/obj/hydroponics/equipment.dmi'
 	icon_state = "mister"
 	item_state = "mister"
-	w_class = 4
+	w_class = ITEM_SIZE_LARGE
 	throwforce = 0 //we shall not abuse
 	amount_per_transfer_from_this = 50
 	possible_transfer_amounts = list(25,50,100)

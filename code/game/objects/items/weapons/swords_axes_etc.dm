@@ -38,7 +38,7 @@
 			icon_state = "cutlass1"
 		else
 			icon_state = "sword[item_color]"
-		w_class = 4
+		w_class = ITEM_SIZE_LARGE
 		playsound(user, 'sound/weapons/saberon.ogg', 50, 1)
 		to_chat(user, "\blue [src] is now active.")
 
@@ -48,7 +48,7 @@
 			icon_state = "cutlass0"
 		else
 			icon_state = "sword0"
-		w_class = 2
+		w_class = ITEM_SIZE_SMALL
 		playsound(user, 'sound/weapons/saberoff.ogg', 50, 1)
 		to_chat(user, "\blue [src] can now be concealed.")
 
@@ -119,7 +119,7 @@
 	icon_state = "telebaton_0"
 	item_state = null
 	slot_flags = SLOT_BELT
-	w_class = 2
+	w_class = ITEM_SIZE_SMALL
 	force = 3
 	var/on = 0
 
@@ -132,7 +132,7 @@
 		"You hear an ominous click.")
 		icon_state = "telebaton_1"
 		item_state = "nullrod"
-		w_class = 3
+		w_class = ITEM_SIZE_NORMAL
 		force = 15//quite robust
 		attack_verb = list("smacked", "struck", "slapped")
 	else
@@ -141,7 +141,7 @@
 		"You hear a click.")
 		icon_state = "telebaton_0"
 		item_state = null
-		w_class = 2
+		w_class = ITEM_SIZE_SMALL
 		force = 3//not so robust now
 		attack_verb = list("hit", "punched")
 
@@ -233,12 +233,12 @@
 		to_chat(user, "\blue The axe is now energised.")
 		src.force = 150
 		src.icon_state = "axe1"
-		src.w_class = 5
+		src.w_class = ITEM_SIZE_HUGE
 	else
 		to_chat(user, "\blue The axe can now be concealed.")
 		src.force = 40
 		src.icon_state = "axe0"
-		src.w_class = 5
+		src.w_class = ITEM_SIZE_HUGE
 	src.add_fingerprint(user)
 	return
 
@@ -268,7 +268,7 @@
 /obj/item/weapon/shield/energy/proc/turn_on(mob/living/user)
 	force = 10
 	icon_state = "eshield[active]"
-	w_class = 4
+	w_class = ITEM_SIZE_LARGE
 	playsound(loc, 'sound/weapons/saberon.ogg', 50, 1)
 	to_chat(user, "<span class='notice'> [src] is now active.</span>")
 	update_icon()
@@ -276,7 +276,7 @@
 /obj/item/weapon/shield/energy/proc/turn_off(mob/living/user)
 	force = 3
 	icon_state = "eshield[active]"
-	w_class = 1
+	w_class = ITEM_SIZE_TINY
 	playsound(loc, 'sound/weapons/saberoff.ogg', 50, 1)
 	update_icon()
 	if(user)

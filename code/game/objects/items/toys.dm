@@ -94,7 +94,7 @@
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "syndballoon"
 	item_state = "syndballoon"
-	w_class = 4.0
+	w_class = ITEM_SIZE_LARGE
 
 /*
  * Fake telebeacon
@@ -128,7 +128,7 @@
 	righthand_file = 'icons/mob/inhands/guns_righthand.dmi'
 	flags =  CONDUCT
 	slot_flags = SLOT_BELT
-	w_class = 3.0
+	w_class = ITEM_SIZE_NORMAL
 	g_amt = 10
 	m_amt = 10
 	attack_verb = list("struck", "pistol whipped", "hit", "bashed")
@@ -182,7 +182,7 @@
 	icon = 'icons/obj/ammo.dmi'
 	icon_state = "357-7"
 	flags = CONDUCT
-	w_class = 1.0
+	w_class = ITEM_SIZE_TINY
 	g_amt = 10
 	m_amt = 10
 	var/amount_left = 7.0
@@ -204,7 +204,7 @@
 	item_state = "crossbow"
 	lefthand_file = 'icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/guns_righthand.dmi'
-	w_class = 2.0
+	w_class = ITEM_SIZE_SMALL
 	attack_verb = list("attacked", "struck", "hit")
 	var/bullets = 5
 
@@ -298,7 +298,7 @@
 	desc = "It's nerf or nothing! Ages 8 and up."
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "foamdart"
-	w_class = 1.0
+	w_class = ITEM_SIZE_TINY
 
 /obj/effect/foam_dart_dummy
 	name = ""
@@ -319,7 +319,7 @@
 	icon_state = "sword0"
 	item_state = "sword0"
 	var/active = 0.0
-	w_class = 2.0
+	w_class = ITEM_SIZE_SMALL
 	flags = NOSHIELD
 	attack_verb = list("attacked", "struck", "hit")
 
@@ -330,13 +330,13 @@
 			playsound(user, 'sound/weapons/saberon.ogg', 50, 1)
 			src.icon_state = "swordblue"
 			src.item_state = "swordblue"
-			src.w_class = 4
+			src.w_class = ITEM_SIZE_LARGE
 		else
 			to_chat(user, "\blue You push the plastic blade back down into the handle.")
 			playsound(user, 'sound/weapons/saberoff.ogg', 50, 1)
 			src.icon_state = "sword0"
 			src.item_state = "sword0"
-			src.w_class = 2
+			src.w_class = ITEM_SIZE_SMALL
 
 		if(istype(user,/mob/living/carbon/human))
 			var/mob/living/carbon/human/H = user
@@ -356,7 +356,7 @@
 	slot_flags = SLOT_BELT | SLOT_BACK
 	force = 5
 	throwforce = 5
-	w_class = 3
+	w_class = ITEM_SIZE_NORMAL
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced")
 
 /*
@@ -368,7 +368,7 @@
 	desc = "A colourful crayon. Please refrain from eating it or putting it in your nose."
 	icon = 'icons/obj/crayons.dmi'
 	icon_state = "crayonred"
-	w_class = 1.0
+	w_class = ITEM_SIZE_TINY
 	attack_verb = list("attacked", "coloured")
 	var/colour = "#FF0000" //RGB
 	var/shadeColour = "#220000" //RGB
@@ -391,7 +391,7 @@
 	desc = "Wow!"
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "snappop"
-	w_class = 1
+	w_class = ITEM_SIZE_TINY
 
 	throw_impact(atom/hit_atom)
 		..()
@@ -583,7 +583,7 @@
 	slot_flags = SLOT_BELT | SLOT_BACK
 	force = 5
 	throwforce = 5
-	w_class = 3
+	w_class = ITEM_SIZE_NORMAL
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced")
 
 /* NYET.
@@ -592,7 +592,7 @@
 	name = "toddler"
 	desc = "This baby looks almost real. Wait, did it just burp?"
 	force = 5
-	w_class = 4.0
+	w_class = ITEM_SIZE_LARGE
 	slot_flags = SLOT_BACK
 */
 
@@ -815,7 +815,7 @@ Owl & Griffin toys
 	desc = "An action figure modeled after 'The Owl', defender of justice."
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "owlprize"
-	w_class = 2
+	w_class = ITEM_SIZE_SMALL
 	var/cooldown = 0
 
 /obj/item/toy/owl/attack_self(mob/user)
@@ -834,7 +834,7 @@ Owl & Griffin toys
 	desc = "An action figure modeled after 'The Griffin', criminal mastermind."
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "griffinprize"
-	w_class = 2
+	w_class = ITEM_SIZE_SMALL
 	var/cooldown = 0
 
 /obj/item/toy/griffin/attack_self(mob/user)
@@ -856,7 +856,7 @@ Owl & Griffin toys
 	desc = "A plastic model of a Nuclear Fission Explosive."
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "nuketoyidle"
-	w_class = 2
+	w_class = ITEM_SIZE_SMALL
 	var/cooldown = 0
 
 /obj/item/toy/nuke/attack_self(mob/user)
@@ -881,7 +881,7 @@ Owl & Griffin toys
 	desc = "Relive the excitement of a meteor shower! SweetMeat-eor. Co is not responsible for any injuries, headaches or hearing loss caused by Mini-Meteor?"
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "minimeteor"
-	w_class = 2
+	w_class = ITEM_SIZE_SMALL
 
 /obj/item/toy/minimeteor/throw_impact(atom/hit_atom)
 	if(!..())
@@ -899,7 +899,7 @@ Owl & Griffin toys
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "carpplushie"
 	item_state = "carp_plushie"
-	w_class = 2
+	w_class = ITEM_SIZE_SMALL
 	attack_verb = list("bitten", "eaten", "fin slapped")
 //	burn_state = 0 //Burnable
 	var/bitesound = 'sound/weapons/bite.ogg'
@@ -925,7 +925,7 @@ Owl & Griffin toys
 	desc = "A deck of space-grade playing cards."
 	icon = 'icons/obj/cards.dmi'
 	icon_state = "deck_full"
-	w_class = 2.0
+	w_class = ITEM_SIZE_SMALL
 	var/list/cards = list()
 
 /obj/item/toy/cards/atom_init()
@@ -1044,7 +1044,7 @@ Owl & Griffin toys
 	desc = "A number of cards not in a deck, customarily held in ones hand."
 	icon = 'icons/obj/cards.dmi'
 	icon_state = "hand2"
-	w_class = 1.0
+	w_class = ITEM_SIZE_TINY
 	var/list/currenthand = list()
 	var/obj/item/toy/cards/parentdeck = null
 	var/choice = null
@@ -1129,7 +1129,7 @@ Owl & Griffin toys
 	desc = "A card."
 	icon = 'icons/obj/cards.dmi'
 	icon_state = "singlecard_down"
-	w_class = 1.0
+	w_class = ITEM_SIZE_TINY
 	var/cardname = null
 	var/obj/item/toy/cards/parentdeck = null
 	var/flipped = 0

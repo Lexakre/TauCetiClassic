@@ -4,7 +4,7 @@
 	name = "plant analyzer"
 	desc = "A hand-held scanner which reports condition of the plant."
 	icon = 'icons/obj/device.dmi'
-	w_class = 1.0
+	w_class = ITEM_SIZE_TINY
 	m_amt = 200
 	g_amt = 50
 	origin_tech = "materials=1;biotech=1"
@@ -26,7 +26,7 @@
 	name = "pack of seeds"
 	icon = 'icons/obj/hydroponics/seeds.dmi'
 	icon_state = "seed" // unknown plant seed - these shouldn't exist in-game
-	w_class = 2.0 // Makes them pocketable
+	w_class = ITEM_SIZE_SMALL // Makes them pocketable
 	var/mypath = "/obj/item/seeds"
 	var/plantname = "Plants"
 	var/productname = ""
@@ -1182,7 +1182,7 @@
 	icon_state = "logs"
 	force = 5
 	throwforce = 5
-	w_class = 3.0
+	w_class = ITEM_SIZE_NORMAL
 	throw_speed = 3
 	throw_range = 3
 	plant_type = 2
@@ -1207,7 +1207,7 @@
 	damtype = "fire"
 	force = 0
 	throwforce = 1
-	w_class = 1.0
+	w_class = ITEM_SIZE_TINY
 	throw_speed = 1
 	throw_range = 3
 	plant_type = 1
@@ -1221,7 +1221,7 @@
 	damtype = "fire"
 	force = 0
 	throwforce = 1
-	w_class = 2.0
+	w_class = ITEM_SIZE_SMALL
 	throw_speed = 1
 	throw_range = 3
 	plant_type = 1
@@ -1241,7 +1241,7 @@
 	damtype = "fire"
 	force = 15
 	throwforce = 1
-	w_class = 2.0
+	w_class = ITEM_SIZE_SMALL
 	throw_speed = 1
 	throw_range = 3
 	plant_type = 1
@@ -1263,7 +1263,7 @@
 	damtype = "fire"
 	force = 30
 	throwforce = 1
-	w_class = 2.0
+	w_class = ITEM_SIZE_SMALL
 	throw_speed = 1
 	throw_range = 3
 	plant_type = 1
@@ -1332,7 +1332,7 @@
 	flags = OPENCONTAINER | NOBLUDGEON
 	slot_flags = SLOT_BELT
 	throwforce = 4
-	w_class = 2.0
+	w_class = ITEM_SIZE_SMALL
 	throw_speed = 2
 	throw_range = 10
 	var/toxicity = 4
@@ -1351,7 +1351,7 @@
 	flags = OPENCONTAINER | NOBLUDGEON
 	slot_flags = SLOT_BELT
 	throwforce = 4
-	w_class = 2.0
+	w_class = ITEM_SIZE_SMALL
 	throw_speed = 2
 	throw_range = 10
 	var/toxicity = 4
@@ -1370,7 +1370,7 @@
 	flags = CONDUCT | NOBLUDGEON
 	force = 5.0
 	throwforce = 7.0
-	w_class = 2.0
+	w_class = ITEM_SIZE_SMALL
 	m_amt = 2550
 	origin_tech = "materials=1;biotech=1"
 	attack_verb = list("slashed", "sliced", "cut", "clawed")
@@ -1415,7 +1415,7 @@
 	name = "bottle of nutrient"
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "bottle16"
-	w_class = 2.0
+	w_class = ITEM_SIZE_SMALL
 	var/mutmod = 0
 	var/yieldmod = 0
 
