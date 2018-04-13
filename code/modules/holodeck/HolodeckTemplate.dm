@@ -1,4 +1,4 @@
-#define HOLO_SIZE_X 10
+#define HOLO_SIZE_X 5
 #define HOLO_SIZE_Y 10
 
 /datum/map_template/holoscene
@@ -39,10 +39,10 @@
 	holoscene_id = "beach"
 	mappath = "maps/templates/holodeck/beach.dmm"
 
-/datum/map_template/holoscene/boxingcourt
-	name = "Boxing Ring"
-	holoscene_id = "boxingcourt"
-	mappath = "maps/templates/holodeck/boxingcourt.dmm"
+/datum/map_template/holoscene/firingrange
+	name = "Firing Range"
+	holoscene_id = "firingrange"
+	mappath = "maps/templates/holodeck/firingrange.dmm"
 
 /datum/map_template/holoscene/burntest
 	name = "Atmospheric Burn Simulation"
@@ -101,3 +101,18 @@
 	holoscene_id = "wildlifecarp"
 	mappath = "maps/templates/holodeck/wildlifecarp.dmm"
 	restricted = TRUE
+
+/datum/map_template/holoscene/spacechess
+	name = "Space Chess"
+	holoscene_id = "spacechess"
+	mappath = "maps/templates/holodeck/spacechess.dmm"
+
+/datum/map_template/holoscene/school
+	name = "Anime School"
+	holoscene_id = "school"
+	mappath = "maps/templates/holodeck/school.dmm"
+
+/datum/map_template/holoscene/chapelcourt
+	name = "Chapel Courtroom"
+	holoscene_id = "chapelcourt"
+	mappath = "maps/templates/holodeck/chapelcourt.dmm"

@@ -23,7 +23,7 @@
 	"Empty Court" = "emptycourt", \
 	"Basketball Court" = "basketball",	\
 	"Thunderdome Court" = "thunderdomecourt",	\
-	"Boxing Ring"="boxingcourt",	\
+	"Firing Range" = "firingrange"	\
 	"Beach" = "beach",	\
 	"Desert" = "desert",	\
 	"Space" = "space",	\
@@ -31,7 +31,9 @@
 	"Picnic Area" = "picnicarea", \
 	"Meeting Hall" = "meetinghall",	\
 	"Theatre" = "theatre", \
-	"Courtroom" = "courtroom"	\
+	"Anime School" = "school"	\
+	"Chapel Courtroom" = "chapelcourt"	\
+	"Space Chess" = "spacechess"
 	)
 	var/list/restricted_programs = list("Wildlife Simulation" = "wildlifecarp")// "Atmospheric Burn Simulation" = "burntest", - no, Dave
 
