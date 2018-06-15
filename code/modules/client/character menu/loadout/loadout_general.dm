@@ -1,3 +1,8 @@
+/datum/gear/tabletop
+	display_name = "Tabletop Assistant"
+	path = /obj/item/device/tabletop_assistant
+	cost = 2
+
 /datum/gear/dice
 	display_name = "d20"
 	path = /obj/item/weapon/dice/d20
@@ -75,6 +80,11 @@ datum/gear/zippo
 	path = /obj/item/device/camera/spooky
 	allowed_roles = list("Chaplain", "Paranormal Investigator")
 	cost = 3
+
+/datum/gear/blackcandle
+	display_name = "Black Candle"
+	path = /obj/item/candle/ghost
+	allowed_roles = list("Chaplain", "Paranormal Investigator")
 
 /datum/gear/pulserifle
 	display_name = "Pulse rifle"

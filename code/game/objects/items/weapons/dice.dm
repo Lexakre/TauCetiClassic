@@ -9,6 +9,7 @@
 	w_class = 1
 	var/sides = 6
 	var/result
+	var/accursed_type = /obj/item/weapon/dice/ghost
 	attack_verb = list("diced")
 
 /obj/item/weapon/dice/examine(mob/user)
@@ -23,6 +24,10 @@
 
 /obj/item/weapon/dice/ghost/attackby(obj/item/weapon/W, mob/living/carbon/human/user)
 	..()
+	if(istype(W, /obj/item/device/occult_scanner))
+		var/obj/item/device/occult_scanner/OS = W
+		OS.scanned_type = src.type
+		to_chat(user, "<span class='notice'>[src] has been succesfully scanned by [OS]</span>")
 	if(istype(W, /obj/item/weapon/nullrod))
 		if(user.getBrainLoss() >= 60 || (user.mind && (user.mind.assigned_role == "Chaplain" || user.mind.role_alt_title == "Paranormal Investigator")))
 			poof()
@@ -65,6 +70,7 @@
 	desc = "A die with two sides. Coins are undignified!"
 	icon_state = "d2"
 	sides = 2
+	accursed_type = /obj/item/weapon/dice/ghost/d2
 
 /obj/item/weapon/dice/ghost/d2
 	name = "d2"
@@ -78,6 +84,7 @@
 	desc = "A die with four sides. The nerd's caltrop."
 	icon_state = "d4"
 	sides = 4
+	accursed_type = /obj/item/weapon/dice/ghost/d4
 
 /obj/item/weapon/dice/ghost/d4
 	name = "d4"
@@ -91,6 +98,7 @@
 	desc = "A die with eight sides. It feels... lucky."
 	icon_state = "d8"
 	sides = 8
+	accursed_type = /obj/item/weapon/dice/ghost/d8
 
 /obj/item/weapon/dice/ghost/d8
 	name = "d8"
@@ -104,6 +112,7 @@
 	desc = "A die with ten sides. Useful for percentages."
 	icon_state = "d10"
 	sides = 10
+	accursed_type = /obj/item/weapon/dice/ghost/d10
 
 /obj/item/weapon/dice/ghost/d10
 	name = "d10"
@@ -117,6 +126,7 @@
 	desc = "A die with ten sides. Works better for d100 rolls than a golfball."
 	icon_state = "d00"
 	sides = 10
+	accursed_type = /obj/item/weapon/dice/ghost/d00
 
 /obj/item/weapon/dice/ghost/d00
 	name = "d00"
@@ -130,6 +140,7 @@
 	desc = "A die with twelve sides. There's an air of neglect about it."
 	icon_state = "d12"
 	sides = 12
+	accursed_type = /obj/item/weapon/dice/ghost/d12
 
 /obj/item/weapon/dice/ghost/d12
 	name = "d12"
@@ -143,6 +154,7 @@
 	desc = "A die with twenty sides. The prefered die to throw at the GM."
 	icon_state = "d20"
 	sides = 20
+	accursed_type = /obj/item/weapon/dice/ghost/d20
 
 /obj/item/weapon/dice/ghost/d20
 	name = "d20"
@@ -164,6 +176,8 @@
 		else
 			to_chat(user, "<span class='warning'>You suddenly feel bamboozled because of your own luck!</span>")
 			user.confused += SLIGHTLY_CONFUSED
+	if(result == 1)
+		poof()
 
 /obj/item/weapon/dice/ghost/d20/throw_at(mob/living/target, range, speed, mob/living/thrower)
 	diceroll()
@@ -205,7 +219,7 @@
 	else if(sides == 20 && result == 1)
 		comment = "Ouch, bad luck."
 	icon_state = "[initial(icon_state)][result]"
-	if(initial(icon_state) == "d00")
+	if(istype(src, /obj/item/weapon/dice/d00) || istype(src, /obj/item/weapon/dice/ghost/d00))
 		result = (result - 1)*10
 	if(user) //Dice was rolled in someone's hand
 		user.visible_message("<span class='notice'>[user] has thrown [src]. It lands on [result]. [comment]</span>",
@@ -264,17 +278,10 @@
 
 /obj/item/weapon/storage/pill_bottle/attackby(obj/item/weapon/W, mob/living/carbon/human/user)
 	..()
-	if(istype(W, /obj/item/weapon/nullrod))
-		if(user.getBrainLoss() >= 60 || (user.mind && (user.mind.assigned_role == "Chaplain" || user.mind.role_alt_title == "Paranormal Investigator")))
-			var/count
-			for(var/obj/item/weapon/dice/ghost/A in src)
-				count++
-				var/obj/item/weapon/dice/B = new A.normal_type(src)
-				B.result = A.result
-				B.icon_state = "[initial(B.icon_state)][B.result]"
-				qdel(A)
-			if(count)
-				to_chat(user, "<span class='notice'>You have cleansed the entirety of [src]'s contents!</span>")
+	if(istype(W, /obj/item/device/occult_scanner))
+		var/obj/item/device/occult_scanner/OS = W
+		OS.scanned_type = src.type
+		to_chat(user, "<span class='notice'>[src] has been succesfully scanned by [OS]</span>")
 
 #undef AMPLITUDE
 #undef SLIGHTLY_CONFUSED
